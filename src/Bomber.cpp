@@ -2,7 +2,7 @@
 
 Bomber::Bomber()
 {
-    //ctor
+    setAttack(getAttack()*2);
 }
 
 Bomber::~Bomber()

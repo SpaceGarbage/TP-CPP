@@ -3,15 +3,15 @@
 zombie::zombie()
 {
 	nom = "Default";
+    force = 5;
     pv = 50;
-	force = 5;
 }
 
 zombie::zombie(string n, int p, int f)
 {
 	if(p > 100 || f > 10)
 	{
-		//this->~zombie;
+
 	}
 	else
 	{
@@ -43,7 +43,7 @@ zombie::ShowInfos()
 
 void zombie::setPv(int p)
 {
-	if (p > 1000 || p < 0)
+	if (p > 100 || p < 0)
 	{
 		cerr << "Décomposition instantanée" << endl;
 		pv = 0;
