@@ -1,19 +1,49 @@
 #ifndef ZOMBIE_H
-#endif // ZOMBIE_H
+#endif//ZOMBIE_H
+#define ZOMBIE_H
 
+#include <string>
+#include <iostream>
+#include <random>
+#include <ctime>
+#include <stdlib.h>
 
-class Zombie
+using namespace std;
+
+class zombie
 {
-    public:
-    Zombie();
-    virtual~Zombie();
+	private:
 
-    protected:
+	public:
 
-    private:
-    int pv = 1;
-	int attack = 1;
-	string nom = "";
+	//VARIABLES
+	string nom;
+	int pv;
+	int force;
+
+	//CONSTRUCTEURS
+	zombie();
+	zombie(string n, int p, int f);
+
+	//DESTRUCTEURS
+	~zombie();
+
+	//FONCTIONS
+	AttaqueZombie(zombie *cible);
+	ShowInfos();
+
+	//GETTER/SETTER Nom
+	string getNom() const;
+	void setNom(string n);
+
+	//GETTER/SETTER Pv
+	int getPv() const;
+	void setPv(int p);
+
+	//GETTER/SETTER Force
+	int getForce() const;
+	void setForce(int f);
+
 };
 
-#endif//ZOMBIE_H
+#endif // ZOMBIE_H
